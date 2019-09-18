@@ -39,28 +39,38 @@ public class PigLatinCat {
 
             String pigLatinString = wordMinusFirstLetter + firstLetter + "ay ";
 
+//            System.out.println(pigLatinString);
             //-----------------------------------------------------------------------------
 
             //CHECK TO SEE IF WORDS HAVE PUNCTUATION
 
+            //TURN TRANSLATED STRING BACK INTO ARRAY
+
             String[] pigLatinArray = pigLatinString.split(" ");
 
             for(String nextVar: pigLatinArray) {
+
                 //Loop that checks each word and see if it has punctuation and then removes it
+
+                System.out.print(nextVar + " ");
+
                 if(nextVar.indexOf("?") >= 1) {
-                    String correctedWord = nextVar.replace("?", "");
-                    nextVar += correctedWord;
-                    System.out.println(nextVar);
-                }
-
-
-            }
-
-        }
+                    //Take out that character and place it at the end
 
 
 
 
+                } //if
 
-    }
-}
+
+            } //for()
+
+        }// for() outer
+
+
+
+
+
+    } //main()
+
+} //pigLatinCat Class
