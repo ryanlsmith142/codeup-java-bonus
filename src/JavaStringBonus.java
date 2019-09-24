@@ -15,18 +15,19 @@ public class JavaStringBonus {
 //
 //        input - 12/01/1999
 //        output - December 12, 1999
-        System.out.println(formatDate("01/18/1991"));
+
+//        System.out.println(formatDate("01/18/1991"));
+
 //                ----BONUS 2
 //
 //        Create an application that allows the user to enter a sentence
 //        and tells them how many vowels and consonants were used.
 //
 //        Example:
-//
 //        input - "The hill are alive."
 //        output - 5 vowels and 10 consonants
-//
-//
+
+        System.out.println(countVowelsAndConsonants("I wish I was a blarney stone"));
 //                ----BONUS 3
 //
 //        Create a command line calculator application.
@@ -98,5 +99,32 @@ public class JavaStringBonus {
 
         return month + " " + day + "," + year;
     }
+
+    public static String countVowelsAndConsonants(String input) {
+        int vowelCount = 0;
+
+        int consonantCount = 0;
+
+        String methodInput = input.toLowerCase();
+
+
+
+        for(int i = 0; i <= methodInput.length() - 1; i++) {
+
+            if(methodInput.charAt(i) == 'a' || methodInput.charAt(i) == 'e' || methodInput.charAt(i) == 'i' || methodInput.charAt(i) == 'o' || methodInput.charAt(i) == 'u') {
+                vowelCount++;
+            } else {
+                if(methodInput.charAt(i) == ' ') {
+                    continue;
+                }
+                consonantCount++;
+            }
+        }
+
+        return "The vowel count is " + vowelCount + "\n" + "The consonant count is " + consonantCount;
+
+
+    }
+
 
 } //JavaStringBonus
