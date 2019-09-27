@@ -27,7 +27,7 @@ public class JavaStringBonus {
 //        input - "The hill are alive."
 //        output - 5 vowels and 10 consonants
 
-        System.out.println(countVowelsAndConsonants("I wish I was a blarney stone"));
+//        System.out.println(countVowelsAndConsonants("I wish I was a blarney stone"));
 //                ----BONUS 3
 //
 //        Create a command line calculator application.
