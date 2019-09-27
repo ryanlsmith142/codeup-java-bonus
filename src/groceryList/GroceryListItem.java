@@ -1,11 +1,13 @@
 package groceryList;
 
+import java.util.Arrays;
+
 public class GroceryListItem {
     private String name;
     private int quantity;
     private String category;
 
-    public void GrocerListItem(String name, int quantity, String category) {
+    public GroceryListItem(String name, int quantity, String category) {
         setName(name);
         setQuantity(quantity);
         setCategory(category);
@@ -34,4 +36,13 @@ public class GroceryListItem {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public static GroceryListItem[] addGroceryListItem(GroceryListItem[] array, GroceryListItem newItem) {
+        GroceryListItem[] copyOfGroceryListItemArray = Arrays.copyOf(array, array.length);
+
+        copyOfGroceryListItemArray[copyOfGroceryListItemArray.length - 1] = newItem;
+
+        return copyOfGroceryListItemArray;
+    }
+
 }
